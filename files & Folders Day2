@@ -1,0 +1,91 @@
+======= Creating Files and folders ========
+touch file1 -> create empty file
+touch -/downloads/file1 -> create empty file in specific directory/folder
+echo "hello" > file1.txt -> create file and write into file
+mkdir abc -> create empty dir or folder
+mkdir -/downloads/xyz -> creating xyz folder in specific dir/folder
+mkdir -p abc/xyz/123 -> create directory in a path
+mkdir abc xyz -> create multiple folder
+mkdir "abc zxc" -> crete folder with space name
+mkdir "ABC_XCZ" -> create folder with symbol name
+mkdir "AXC BNM" -> create folder with capital letter name 
+
+mkdir {a,b,c,d,e,f}_{1,2,3,4,5,6,7,8,9}  -> create multiple folder in a single command 
+mkdir {a,b,c,d,e,f}_{1..9}  -> create multiple folder in a single command 
+Touch {a,b,c,d,e,f}_{1..9}/file{1..100}  -> create multiple files in a multiple folder with a single command
+ls {a,b,c,d,e,f}_{1..9}/file{1..100}  -> show multiple files in a multiple folder with a single command
+
+======= delete Files and folders ========
+
+rm file1.txt  -> delete a file
+rm -/downloads/file.txt -> delete file in directory from home directory
+rm file1.txt -/downloads/file.txt -> delete multiple file
+rm *.txt -> delete all txt files
+rm file* -> delete all file that name start with file
+rm *4* -> delete all file that have 4 in their name
+
+rm -r sharma -> delete a folder
+rm -r sharma/ -> delete a folder and inside all thing in it
+rm -ri sharma/ -> delete a folder and inside all thing in it but before delete it confirm 
+rmdir sharma -> delete a folder/directory
+
+======= copy Files and folders ========
+cp file.txt file2.txt -> copy from file 1 to file 2
+
+
+======= moving & rename Files and folders ========
+mv file1.txt file2.txt  -> rename from file 1 to file2
+mv vishal/ vishal  -> rename a folder
+mv -/desktop/vis -/downloads/ -> move folder from one dir to another dir
+
+======= editing Files by nano ========
+nano file1.txt -> create and edit a file through nano
+we cam use many option in nano editor 
+
+======= Locate command ========
+locate *.log -> find all log files in our system
+sudo updatedb -> add files in db to find through locate
+
+======= Find command ========
+find -> show all files & folders in cureent directories
+find /home/vis/downloads/noida -> find folder
+find . -maxdepth 1 -> show level 1 all folder and files
+find . -maxdepth 4 -tyde d  -> show level 4 all folders 
+find . -name "5.txt" -> search 5.txt file by name
+find . -name "*.txt" -> search all .txt file by name
+find . -iname "*.txt" -> search all .txt file by case senstative name
+sudo find / -type f -size +100k  -> search all files that have more than 100 KB size
+sudo find / -type f -size -100k -o -size +5M | wc -l -> find files count by size
+
+======= Viewing Files ========
+cat file1.txt -> show content in file1
+cat file[1-5].txt > file6 -> show all 1 to 5 files content in file 6
+cat file[1-5].txt | tac -> reverse content vertically
+cat file[1-5].txt | head -n 2  -> show top 2 lines
+
+
+======= Sorting Data ========
+sort word.txt > sorted.txt  -> sort content with alphabetic
+sort -r word.txt   -> reverse txt 
+ls -l /etc | head -n 20 | sort -k 5nr  - >sort files in etc folder
+
+======== File Archiving and Compression ==========
+tar -cvf abc.tar file[1-3].txt  -> archieve all text file from 1 to 3
+tar -xvf abc.tar -> extract tar file
+gzip abc.tar  ->zzip the tar file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+Base script file base.sh
+
+#!/bin/bash
+echo "hello world"
+mkdir ~/desktop/magic
+cd ~/desktop/magic
+touch file{1..100}.txt
+ls -lh ~/desktop/magic > ~/desktop/magic.log
+
+base script backup.sh
+#!/bin/bash
+tar -cvzf backup.tar.gz ~/{download, picture,document}
+
+
+=======Cron jobs ========
+min hour day month dayofweek   Commnd
+12   10   5   Jan   Mon        echo "hello world" >> ~/desktop/abc.txt
+
+crontab -e 
+
+
+
+
+
+
+
+

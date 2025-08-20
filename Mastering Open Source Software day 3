@@ -1,0 +1,7 @@
+sudo apt-get install gcc -> install c compiler in GCU
+supt apt-get update -> update all cache
+supt apt-get upgrade ->update all softwares
+we need to make sure we update cache before update software 
+sudo apt-get purge package name  -> uninstall an software
+Learn how to install Virtual Box in ubuntu
+Course completed
